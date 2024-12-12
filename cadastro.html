@@ -10,15 +10,23 @@
     <div class="container">
         <div class="column left">
             <form>
-                <h1>Minha conta</h1>
-                <input type="text" name="email" id="email" placeholder="Digite seu email">
-                <input type="password" name="password" id="password" placeholder="Digite sua senha">
-                <input type="submit" value="Acessar">
-                <span class="signup-text">Novo por aqui? <a class="signup-link" href="./login.html">Cadastre-se</a></span>
+                <h1>Nova conta</h1>
+                <input type="text" name="email" id="nome" placeholder="Nome completo" required>
+                <input type="text" name="email" id="email" placeholder="Digite seu email" required>
+                <input type="password" name="password" id="password" placeholder="Digite sua senha" required>
+                <div class="checkbox-container">
+                    <input type="checkbox" name="agree" id="agree"><label for="agree"><span class="agree-terms">Concordo com os termos</span></label>
+                </div>    
+                <input type="submit" value="Criar conta">
+                <span class="signup-text">Já possui uma conta? <a class="signup-link" href="./login.html">Faça login</a></span>
             </form>
         </div>
         <div class="column right">
-            
+            <div class="container-right">
+                <img src="./assets/info.png" alt="">
+                <h1>Leve sua carreira ao <br>próximo nível.</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam veniam repellendus laudantium fugit fugiat cupiditate quae quis, ab temporibus aspernatur voluptatum quas optio deserunt ipsum, eveniet quasi totam illum rem.</p>
+            </div>
         </div>
     </div>
 </body>

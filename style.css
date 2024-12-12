@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+body {
+    --white-color: #ffffff;
+    --black-color: #000000;
+    --blue-color: #0055F1;
+}
+
 /* LOGIN */
 .container {
     width: 100%;
@@ -16,44 +22,54 @@
 }
 
 .left {
-    background-color: #FFFFFF;
+    background-color: var(--white-color);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .right {
-    background-color: #0055F1;
+    background-color: var(--blue-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 form {
     width: 50%;
-    height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 input[type="text"], input[type="password"] {
-    padding: 10px;
-    border: #000000 1px solid;
+    margin: 10px 0;
+    padding: 15px;
+    border: var(--black-color) 1px solid;
     border-radius: 4px;
+    font-size: 15px;
 }
 
-input[type="text"], input[type="password"]:focus {
-
+input[type="text"]:focus, input[type="password"]:focus {
+    outline: 0;
 }
 
 input[type="submit"] {
+    margin: 10px 0;
     padding: 12px;
     border: 0;
-    background-color: #0055F1;
-    color: #ffffff;
+    background-color: var(--blue-color);
+    color: var(--white-color);
     border-radius: 4px;
     cursor: pointer;
 }
 
+input[type="checkbox"] {
+    
+}
+
 .signup-text {
+    margin-top: 10px;
     font-size: 18px;
     font-weight: bold;
     user-select: none;
@@ -61,5 +77,93 @@ input[type="submit"] {
 
 .signup-link {
     text-decoration: none;
-    color: #0055F1;
+    color: var(--blue-color);
+}
+
+.container-right {
+    width: 50%;
+}
+
+.container-right img {
+    width: 100%;
+}
+
+.container-right h1 {
+    margin: 20px 0;
+    color: var(--white-color);
+}
+
+.container-right p {
+    font-size: 20px;
+    color: var(--white-color);
+}
+
+.checkbox-container {
+    margin: 10px 0;
+}
+
+.agree-terms {
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1010px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .column {
+        width: 100%;
+        margin: 30px 0;
+    }
+
+    .container-right {
+        margin: 50px 0;
+    }
+
+    .container-right h1 {
+        font-size: 25px;
+    }
+
+    .container-right p {
+        font-size: 18px;
+        text-align: justify;
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .column {
+        width: 100%;
+        margin: 50px 0;
+    }
+
+    form h1 {
+        font-size: 25px;
+    }
+
+    .signup-text {
+        font-size: 14px;
+    }
+
+    .agree-terms {
+        font-size: 15px;
+    }
+
+    .container-right {
+        margin: 50px 0;
+    }
+
+    .container-right h1 {
+        font-size: 19px;
+    }
+
+    .container-right p {
+        font-size: 16px;
+        text-align: justify;
+    }
 }
